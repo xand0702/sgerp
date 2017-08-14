@@ -1,0 +1,8 @@
+cadastro
+tabela
+consulta
+alterar
+deletar
+info
+rel_info
+relatórios

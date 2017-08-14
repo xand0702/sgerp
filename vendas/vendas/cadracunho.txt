@@ -1,0 +1,7 @@
+quant/tempo
+valor
+data
+prod/desc
+fornecedor
+tipo
+atendido

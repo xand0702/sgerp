@@ -1,0 +1,997 @@
+
+			<div 
+			class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" 
+			tabindex="-1" role="dialog" aria-describedby="dialog-form" aria-labelledby="ui-id-1" 
+			style="position: absolute; height: auto; width: 350px; top: 171.5px; left: 334px; display: none; z-index: 101;">
+			
+			
+			
+			
+			
+			
+			
+			<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle">
+			<span id="ui-id-1" class="ui-dialog-title">&nbsp;</span>
+			<button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" 
+			role="button" title="Close">
+			<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+			<span class="ui-button-text">Close</span>
+			</button>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			<div id="dialog-form" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 0px; max-height: none; height: 207px;">
+	<p class="validateTips">Cadastro Pessoa Física</p>
+
+	<form action="gdp/pessoafisicacadastro.php" method="post">
+		<fieldset>
+			<label>Nome*</label>
+			<input type="text" name="nome" class="text ui-widget-content ui-corner-all">
+			<label>Telefone*</label>
+			<input type="number" name="telefone" class="text ui-widget-content ui-corner-all">
+			<label>Celular</label>
+			<input type="number" name="celular" class="text ui-widget-content ui-corner-all">
+			
+			
+			<label>CPF*</label>
+			<input type="number" name="cpf" class="text ui-widget-content ui-corner-all">
+			
+			<label>Email</label>
+			<input type="text" name="email" class="text ui-widget-content ui-corner-all">
+			
+			
+			
+			<label>RG</label>
+			<input type="number" name="rg" class="text ui-widget-content ui-corner-all">
+			
+			<label>Orgão Expedidor</label>
+			<input type="text" name="oe" class="text ui-widget-content ui-corner-all">
+			<label>Data de Nascimento</label>
+			<input type="date" name="dn" class="text ui-widget-content ui-corner-all">
+			<label>Nome da Mãe</label>
+			<input type="text" name="nmae" class="text ui-widget-content ui-corner-all">
+			<label>Nome do Pai</label>
+			<input type="text" name="npai" class="text ui-widget-content ui-corner-all">
+			
+			
+			
+			
+			
+			<label>Sexo</label>
+
+
+
+
+
+
+			
+
+
+
+<select name="sexo">
+
+
+
+<?php
+
+
+
+$t = "
+
+SELECT s.SEX_NOME sexo, s.SEX_ID id
+FROM sexo s
+
+";
+
+	foreach($conn->query($t) as $row)
+	{
+
+
+  if($row['sexo'] == "F")
+  {$option = "Feminino";}
+	else
+	{$option = "Masculino";}	
+	
+  echo '<option value="'.utf8_encode($row['id']).'"> '.utf8_encode($option).'  </option>'; 
+  
+  
+  
+  
+
+	}
+
+
+ 
+
+
+
+?>			
+	
+
+ </select>
+
+
+
+
+
+
+		
+			
+			
+			<label for="password">Endereço</label>
+			<input type="text" name="endereco" id="password" class="text ui-widget-content ui-corner-all">
+			<label for="password">Bairro</label>
+			<input type="text" name="bairro" id="password" class="text ui-widget-content ui-corner-all">
+			<label for="password">CEP</label>
+			<input type="number" name="cep" id="password" class="text ui-widget-content ui-corner-all">
+			
+			
+			
+			<label for="password">Cidade - link</label>
+			
+			
+
+
+
+
+
+
+
+			
+
+
+
+<select name="cidade">
+
+
+
+<?php
+
+
+
+$tt = "
+
+SELECT c.CID_NOME nome, c.CID_ID id
+FROM cidade c
+
+";
+
+
+
+
+	foreach($conn->query($tt) as $row)
+	{
+
+
+
+	
+		echo '<option value="'.utf8_encode($row['id']).'"> '.utf8_encode($row['nome']).'  </option>'; 
+
+	}
+
+
+
+?>			
+	
+
+ </select>
+			<label for="password">Estado - LINK</label>
+			
+			
+<select name="estado">
+
+
+
+<?php
+
+
+
+$tt3 = "
+
+SELECT e.EST_NOME estado, e.EST_ID id
+FROM estado e
+
+
+
+";
+
+
+
+
+	foreach($conn->query($tt3) as $row)
+	{
+
+
+
+	
+		echo '<option value="'.utf8_encode($row['id']).'"> '.utf8_encode($row['estado']).'  </option>'; 
+
+	}
+
+
+?>			
+	
+
+ </select>			
+			
+			
+			
+			<label for="password">País - LINK</label>
+			
+			
+<select name="pais">
+
+
+
+<?php
+
+
+
+$tt4 = "
+
+SELECT p.PAS_NOME pais, P.PAS_ID id
+FROM pais p
+
+
+";
+
+	foreach($conn->query($tt4) as $row)
+	{
+
+
+
+	
+		echo '<option value="'.utf8_encode($row['id']).'"> '.utf8_encode($row['pais']).'  </option>'; 
+
+	}
+
+
+
+?>			
+	
+
+ </select>					
+			
+			
+			<label for="password">Naturalidade - LINK</label>
+			
+			
+	<select name="naturalidade">
+
+
+
+<?php
+
+
+
+$tt = "
+
+SELECT c.CID_NOME nome, c.CID_ID id
+FROM cidade c
+";
+
+
+
+	foreach($conn->query($tt) as $row)
+	{
+
+
+
+	
+		echo '<option value="'.utf8_encode($row['id']).'"> '.utf8_encode($row['nome']).'  </option>'; 
+
+	}
+
+
+?>			
+	
+
+ </select>		
+			
+			
+			<label for="password">Nacionalidade</label>
+			
+			
+			
+<select name="nacionalidade">
+
+
+
+<?php
+
+
+
+$tt4 = "
+
+SELECT p.PAS_NOME pais, P.PAS_ID id
+FROM pais p
+
+";
+
+
+
+	foreach($conn->query($tt4) as $row)
+	{
+
+
+
+	
+		echo '<option value="'.utf8_encode($row['id']).'"> '.utf8_encode($row['pais']).'  </option>'; 
+
+	}
+
+
+
+?>			
+	
+
+ </select>					
+			
+			
+			<label for="password">Estado Civil - LINK</label>
+			
+			
+<select name="ecivil">
+
+
+
+<?php
+
+
+
+$tt5 = "
+
+SELECT c.CIV_NOME civil, C.CIV_ID id
+FROM civil c
+
+
+
+";
+
+
+
+
+	foreach($conn->query($tt5) as $row)
+	{
+		echo '<option value="'.utf8_encode($row['id']).'"> '.utf8_encode($row['civil']).'  </option>'; 
+	}
+
+
+
+?>			
+	
+
+ </select>					
+			
+			
+			
+			
+			<label for="password">Imagem</label>
+			<input type="file" name="imagem" class="text ui-widget-content ui-corner-all">
+			
+			
+<?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function imgmove($nome, $tipo, $erro, $tamanho, $local)
+{
+$allowedExts = array("gif", "jpeg", "jpg", "png");
+$temp = explode(".", $nome);
+$extension = end($temp);
+if ((($tipo == "image/gif")
+|| ($tipo == "image/jpeg")
+|| ($tipo == "image/jpg")
+|| ($tipo == "image/pjpeg")
+|| ($tipo == "image/x-png")
+|| ($tipo == "image/png"))
+&& ($tamanho > 5)
+&& in_array($extension, $allowedExts))
+  {
+  if ($erro > 0)
+    {
+    }
+  else
+    {
+
+    if (file_exists("img/". $nome))
+      {
+      }
+    else
+      {
+      move_uploaded_file($local,'img/'.$nome);
+      }
+    }
+  }
+else
+  {
+  }
+}
+
+
+
+
+
+
+
+
+/*
+
+
+function imgmove($nome, $tipo, $erro, $tamanho, $local)
+{
+$allowedExts = array("gif", "jpeg", "jpg", "png");
+$temp = explode(".", $nome);
+$extension = end($temp);
+if ((($tipo == "image/gif")
+|| ($tipo == "image/jpeg")
+|| ($tipo == "image/jpg")
+|| ($tipo == "image/pjpeg")
+|| ($tipo == "image/x-png")
+|| ($tipo == "image/png"))
+&& ($tamanho > 5)
+&& in_array($extension, $allowedExts))
+  {
+  if ($erro > 0)
+    {
+    }
+  else
+    {
+
+    if (file_exists("img/". $nome))
+      {
+      }
+    else
+      {
+      move_uploaded_file($local,'img/'.$nome);
+      }
+    }
+  }
+else
+  {
+  }
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+function imgauto()
+{
+
+$allowedExts = array("gif", "jpeg", "jpg", "png");
+$temp = explode(".", $_FILES["file"]["name"]);
+$extension = end($temp);
+if ((($_FILES["file"]["type"] == "image/gif")
+|| ($_FILES["file"]["type"] == "image/jpeg")
+|| ($_FILES["file"]["type"] == "image/jpg")
+|| ($_FILES["file"]["type"] == "image/pjpeg")
+|| ($_FILES["file"]["type"] == "image/x-png")
+|| ($_FILES["file"]["type"] == "image/png"))
+&& ($_FILES["file"]["size"] < 20000)
+&& in_array($extension, $allowedExts))
+  {
+  if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+    }
+  else
+    {
+    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+
+    if (file_exists("upload/" . $_FILES["file"]["name"]))
+      {
+      echo $_FILES["file"]["name"] . " already exists. ";
+      }
+    else
+      {
+      move_uploaded_file($_FILES["file"]["tmp_name"],
+      "upload/" . $_FILES["file"]["name"]);
+      echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      }
+    }
+  }
+else
+  {
+  echo "Invalid file";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function alterar($ta,$id)
+{
+if($ta == 'estado')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+sigla = '".$_POST['sigla']."', 
+nome = '".$_POST['nome']."',
+
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+elseif($ta == 'ano')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+ano = '".$_POST['ano']."',
+
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+elseif($ta == 'anomodelo')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+anomodelo = '".$_POST['anomodelo']."',
+
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+elseif($ta == 'automovel')
+{
+	if($_FILES["file"]["name"] == '')			//id_marca
+		{$dadoo = $_POST['img'];}			//id_marca
+	else
+		{$dadoo = $_FILES["file"]["name"];}
+$sql = "
+update ".$ta." set 
+
+
+
+id_estado = ".$_POST['estado_codigo'].",
+preco = ".$_POST['preco'].",
+pago = '".$_POST['pago']."',
+
+id_anomodelo = ".$_POST['anomodelo_codigo'].",
+id_ano = ".$_POST['ano_codigo'].",
+img = '".$dadoo."'
+where id_".$ta." = ".$id;
+}
+
+elseif($ta == 'cidade')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+nome = '".$_POST['cidade']."',
+id_estado = '".$_POST['estado_codigo']."',
+
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+elseif($ta == 'bairro')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+nome = '".$_POST['bairro']."',
+id_cidade = '".$_POST['cidade_codigo']."',
+
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+elseif($ta == 'logradouro')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+nome = '".$_POST['rua']."',
+id_bairro = '".$_POST['bairro_codigo']."',
+
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+elseif($ta == 'marca')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+nome = '".$_POST['marca']."',
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+elseif($ta == 'fisica')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+login = '".$_POST['usuario']."',
+senha = '".$_POST['senha']."', 
+cpf = '".$_POST['documento']."', 
+email = '".$_POST['email']."', 
+id_usuario = '".$_POST['usuario_codigo']."',
+
+
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+elseif($ta == 'juridica')
+{
+$n_altera = $_POST['n_alteracao'] + 1;
+$sql = "
+update ".$ta." set 
+login = '".$_POST['usuario']."',
+senha = '".$_POST['senha']."', 
+cnpj = '".$_POST['documento']."', 
+email = '".$_POST['email']."', 
+id_usuario = '".$_POST['usuario_codigo']."',
+
+
+alt_data = '".date('Y-m-d')."',
+alt_hora = '".date('h:i:s')."',
+alt_sessao = '".session_id()."',
+alt_num = ".$n_altera.",
+alt_id_usu = ".$_SESSION['sessao_codigo_usuario'].",
+alt_usu_tipo = ".$_SESSION['sessao_nivel_usuario'].",
+alt_f_j = '".$_SESSION['sessao_tipo_usuario']."'
+where id_".$ta." = ".$id;
+}
+
+
+return @$sql;
+}
+
+
+
+
+
+
+
+?>
+
+			<textarea rows="4" cols="50" class="form-control" name="historico">
+Histórico
+</textarea>
+			
+			
+			
+			
+			
+			<br><br><br>
+			<!-- Allow form submission with keyboard without duplicating the dialog button -->
+			<input type="submit">
+		</fieldset>
+	</form>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--    inporta css form jquery -->
+<link rel="stylesheet" type="text/css"  href="gdp/'.$css.'.css" />	
+
+
+
+
+
+
+
+<!--    inporta js form jquery -->
+
+<script src="gdp/'.$js.'.js" type="text/javascript"></script>  
+
+
+
+	
+
+
+
+
+
+		
+		
+
+<article>
+
+
+
+
+<div class=teste>
+
+<table width=100%><tr><td>
+
+
+
+
+<!--    titulo -->
+
+<div class=titulo align=center>
+
+'.$titulo.'
+
+
+</div>
+
+
+
+
+
+
+
+
+<!--    botoes -->
+
+
+<div class=cadastrar align=center>
+
+
+
+<button id="create-user" 
+			class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" 
+			role="button">
+			<span class="ui-button-text">
+			<span class="ui-button-text">
+			Cadastrar
+			</span>
+			</span>
+			</button>
+			
+			
+			
+			
+</div>		
+
+	
+	
+	
+<div class=relatorio  align=center>
+
+
+
+<button id="create-user2" 
+			class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" 
+			role="button">
+			<span class="ui-button-text">
+			<span class="ui-button-text">
+			Relatório
+			</span>
+			</span>
+			</button>
+			
+			
+			
+			
+</div>		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+														<!--mudar teste-form-->
+			<div 
+			class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" 
+			tabindex="-1" role="dialog" aria-describedby="teste-form" aria-labelledby="ui-id-1" 
+			style="position: absolute; height: auto; width: 350px; top: 171.5px; left: 334px; display: none; z-index: 101;">
+			
+			
+			
+			
+			
+			
+			
+			<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle">
+			<span id="ui-id-1" class="ui-dialog-title">&nbsp;</span>
+			<button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" 
+			role="button" title="Close">
+			<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+			<span class="ui-button-text">Close</span>
+			</button>
+			</div>
+			
+
+
+
+
+
+
+					<!--mudar teste-form-->
+			<div id="teste-form" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 0px; max-height: none; height: 207px;">
+	<p class="validateTips">buceta</p>
+
+	<form action="gdp/mform.php" method="post">
+		<fieldset>
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+			<label for="email">Email</label>
+			<input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+			<!-- Allow form submission with keyboard without duplicating the dialog button -->
+			<input type="submit">
+		</fieldset>
+	</form>
+</div></div>

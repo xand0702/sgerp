@@ -1,0 +1,29 @@
+id 
+codigo
+cod_pessoa
+nota
+pedido****** fk id compra
+data_emissao
+data_saida
+hora_saida
+recebido por
+controle fisco codigo de barra
+serie
+pagina
+natureza da operação
+chave nfe
+
+
+
+
+
+id
+cod_entrada fk id entradapa
+cod_produto fk id produto
+quantidade
+preço un
+un
+cst
+cfop
+ncmsh
+situação

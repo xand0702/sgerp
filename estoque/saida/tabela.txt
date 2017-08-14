@@ -1,0 +1,7 @@
+MATERIAL
+codprod
+nome
+data entrada
+quantidade
+vlun
+un

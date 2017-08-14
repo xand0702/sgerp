@@ -1,0 +1,9 @@
+1
+funcionario
+tipo prod
+2
+produtos
+3
+mostra
+4
+cadastra

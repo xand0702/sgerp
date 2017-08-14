@@ -1,0 +1,11 @@
+id
+codigo
+codigo_pessoa
+TIPO PESSOA
+
+comprador autorizado
+emprego
+renda
+limite*
+telefone confirmação 123
+contato

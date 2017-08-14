@@ -1,0 +1,8 @@
+pa
+quant
+valor venda
+codprod
+
+
+consulta pa
+lista pa

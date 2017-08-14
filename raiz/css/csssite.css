@@ -1,0 +1,426 @@
+/* css formulario*/
+
+
+
+
+
+/* index site*/
+
+
+body {
+    font-family:Verdana,sans-serif;
+	padding-top: 0px;
+	padding-bottom: 0px;	
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+header,section,article {
+    border:1px solid grey;
+    margin:0px;
+	margin-bottom:15px;
+	padding:8px;
+    background-color:white;
+}
+header{
+    color:white;
+	background-color:#265A88;
+	margin-bottom:0px;
+	font-size: 15px;
+	padding-bottom: 0px;
+}
+section {
+    background-color:#ddd;
+	padding-bottom: 10%;
+}
+
+
+article
+{
+	padding-bottom: 80%;
+	
+}
+
+
+
+
+footer{
+	
+	border:1px solid grey;
+	padding-bottom: 10%;
+    color:white;
+	background-color:#265A88;
+	font-size: 15px;
+	vertical-align: bottom;
+}
+
+
+
+/* class style */
+.patrimonio
+{
+	border-right-style: hidden; 
+	border-bottom-style: hidden;
+	color: red;
+	font-size: 25px;
+	width:25%;
+}
+
+.patrimonio2
+{
+	border-bottom-style: hidden;
+	text-align: right;
+	color: red;
+	font-size: 25px;
+	width:25%;
+}
+
+.estado
+{
+	border-right-style: hidden; 
+	border-bottom-style: hidden;
+	color: blue;
+	font-size: 20px;
+	width:25%;
+}
+
+.estado2
+{
+	border-bottom-style: hidden;
+	text-align: right;
+	color: blue;
+	font-size: 20px;
+	width:25%;
+}
+
+.subestado
+{
+	border-right-style: hidden; 
+	border-bottom-style: hidden;
+	color: #000;
+	font-size: 18px;
+	width:25%;
+}
+
+.subestado2
+{
+	border-bottom-style: hidden;
+	text-align: right;
+	color: #000;
+	font-size: 18px;
+	width:25%;
+}
+
+
+.conta
+{
+	border-right-style: hidden; 
+	border-bottom-style: hidden;
+	color: green;
+	font-size: 15px;
+	width:25%;
+}
+
+.conta2
+{
+	border-bottom-style: hidden;
+	text-align: right;
+	color: green;
+	font-size: 15px;
+	width:25%;
+}
+
+.lrazao
+{
+	border-right-style: hidden; 
+	border-left-style: hidden; 
+	border-top-style: hidden;
+	font-size: 12px;
+}
+
+.lrazao2
+{
+	border-bottom-style: hidden;
+	font-size: 12px;
+}
+
+.lrazao3
+{
+	border-bottom-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	font-size: 12px;
+}
+
+.lrazao4
+{
+	border-bottom-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-top-style: hidden;
+	font-size: 12px;
+}
+
+#ldrazao
+{
+	position: static;
+	
+}
+
+#ldrazao2
+{
+	position: static;
+}
+
+
+
+/* modelo estoque */
+.titulo
+{
+	width:100%;
+	height:50px;
+	font-size: 30px;
+	
+}
+
+
+.cadastrar
+{
+	width:50%;
+	height:80px;
+	float:left;
+	font-size: 15px;
+	
+}
+
+.relatorio
+{
+	width:50%;
+	height:80px;
+	float:right;
+	font-size: 15px;
+}
+
+
+
+
+
+
+.pesquisa1
+{
+	width:40%;
+	height:100px;
+	float:left;
+	font-size: 25px;
+}
+
+.pesquisa2
+{
+	width:30%;
+	height:100px;
+	float:left;
+	font-size: 18px;
+}
+
+
+
+
+
+.tabela
+{
+	width:100%;
+	height:400px;
+	font-size: 20px;
+	padding-top: 20px;
+}
+
+.teste
+{
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.label4
+{
+	width:100%;
+	height:50px;
+	font-size: 30px;
+	float:left;
+	text-align: center;
+}
+
+.tablabelinfo
+{
+	align:right;
+}
+
+
+.label1
+{
+	width:50%;
+	height:700px;
+	font-size: 20px;
+	float:right;
+	text-align: left;
+}
+
+.label2
+{
+	width:75%;
+	height:200px;
+	font-size: 20px;
+	float:right;
+	text-align: right;
+}
+
+
+
+
+.tabimg
+{
+	background-color: #eee;
+	width:162.5px;
+	height:177.5px;
+}
+
+
+.perfilimg {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+.label3
+{
+	width:25%;
+	height:200px;
+	font-size: 20px;
+	float:left;
+}
+.label5
+{
+	width:100%;
+	height:1000px;
+	font-size: 20px;
+	float:left;
+	text-align: right;
+}
+
+
+.label6
+{
+	width:100%;
+	height:300px;
+	font-size: 20px;
+	float:left;
+	text-align: right;
+}
+
+.label7
+{
+	width:100%;
+	height:600px;
+	font-size: 20px;
+	float:left;
+	text-align: right;
+}
+
+
+.fomrat007
+{
+	width:100%;
+	height:500px;
+	font-size: 20px;
+	float:left;
+	text-align: right;
+}
+
+.fomrat008
+{
+	width:100%;
+	height:700px;
+	font-size: 20px;
+	float:left;
+	text-align: right;
+}
+
+
+.tabinfo1
+{
+	width:33%;
+	text-align: right;
+	
+}
+
+
+.tabinfo2
+{
+	width:67%;
+	text-align: left;
+}
+
+
+.tabinfo3
+{
+	text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+	color: #ffffff;
+	background: #265A88;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+	font-color: #ffffff;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: #265A88;
+    cursor: inherit;
+    display: block;
+}

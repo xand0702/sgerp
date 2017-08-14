@@ -1,0 +1,28 @@
+descrição
+abreveatura desc.
+fabricante
+marca
+modelo
+unidade
+codigo de barras
+categoria ex eletronico
+estoque critico
+estoque alerta
+estoque maximo
+peso bruto
+peso liquido
+comprimento
+largura 
+altura
+grade
+agrupamento
+situação tributaria
+substituição tributaria
+dias de garantia
+classificação fiscal
+cofins
+irpj
+alicota
+icms
+situação tributária 
+ipi

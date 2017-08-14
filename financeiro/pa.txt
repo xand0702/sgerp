@@ -1,0 +1,11 @@
+fornecedor
+
+produto/descrição
+
+quantidade
+
+valor/un
+
+total
+
+icms
